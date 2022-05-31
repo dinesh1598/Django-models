@@ -1,0 +1,23 @@
+<html>
+    {%load static%}
+    <title>
+        DB models
+    </title>
+    <body>
+        <h1>hello world</h1>
+        {% if emp_list %}
+        <table>
+            {% for Employee in emp_list %}
+            <tr>
+                <td>{{Employee.empNo}}</td>
+                <td>{{Employee.empName}}</td>
+                <td>{{Employee.empSalary}}</td>
+                <td>{{Employee.empAddress}}</td>
+            </tr>
+            {% endfor %}
+            
+        </table>
+        {% endif %}
+
+    </body>
+</html>
